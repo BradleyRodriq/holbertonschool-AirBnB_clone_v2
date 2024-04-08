@@ -21,9 +21,9 @@ def funC(text):
     """ returns C """
     return 'C ' + text.replace('_', ' ')
 
-
+@app.route('/python/', defaults={'text': "is cool"}, strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
-def pyfun(text, default="is cool"):
+def pyfun(text):
     """ returns python """
     return 'Python ' + text.replace('_', ' ')
 
