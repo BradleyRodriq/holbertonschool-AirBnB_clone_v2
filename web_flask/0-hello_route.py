@@ -1,10 +1,12 @@
 from flask import Flask
+""" starts the flask app """
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def hello_world():
+    """ returns hello HBNB """
     return 'Hello HBNB'
 
 
