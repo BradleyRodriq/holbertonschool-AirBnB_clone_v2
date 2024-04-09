@@ -62,3 +62,7 @@ class FileStorage:
             pass
         else:
             del self.__objects["{}.{}".format(type(obj).__name__, obj.id)]
+
+    def close(self):
+        """ call reload """
+        self.reload()
