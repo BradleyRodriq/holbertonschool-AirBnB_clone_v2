@@ -1,4 +1,5 @@
 from flask import Flask
+from flask import render_template
 """ starts the flask app """
 
 app = Flask(__name__)
@@ -27,11 +28,15 @@ def pyfun(text):
     """ returns python """
     return 'Python ' + text.replace('_', ' ')
 
-@app.route('/number/<n>', strict_slashes=False)
+@app.route('/number/<int:n>', strict_slashes=False)
 def its_a_num(n):
     """ returns the number """
     return str(n) + " is a number"
 
+@app.route('/number_template/<int:n>', strict_slashes=False)
+def number_template(n):
+    """ display html only if n is an integer """
+    return render_template("5-number.html", n=n)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
