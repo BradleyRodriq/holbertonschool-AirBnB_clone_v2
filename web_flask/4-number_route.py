@@ -33,7 +33,7 @@ def pyfun(text):
 @app.route('/number/<n>', strict_slashes=False)
 def its_a_num(n):
     """ returns the number """
-    return str(n) + " is a number"
+    return str(n) + " " + "is a number"
 
 
 if __name__ == '__main__':
