@@ -17,33 +17,33 @@
 		<div class="container">
 			<section class="filters">
 				<button>Search</button>
-                <DIV class="locations">
-                    <H3>States</H3>
-                    <H4>&nbsp;</H4>
-                    <DIV class="popover">
-                      <UL>
-                      {% for state in states.values()|sort(attribute="name") %}
-                        <LI><STRONG>{{ state.name }}</STRONG>
-                          <UL>
-                          {% for city in state.cities|sort(attribute="name") %}
-                            <LI>{{ city.name }}</LI>
-                          {% endfor %}
-                          </UL>
-                        </LI>
-                      {% endfor %}
-                      </UL>
-                    </DIV>
-                  </DIV><DIV class="amenities">
-                    <H3>Amenities</H3>
-                    <H4>&nbsp;</H4>
-                    <UL class="popover">
-                    {% for amenity in amenities.values()|sort(attribute="name") %}
-                      <LI>{{ amenity.name }}</LI>
+              <DIV class="locations">
+                  <H3>States</H3>
+                  <H4>&nbsp;</H4>
+                  <DIV class="popover">
+                    <UL>
+                    {% for state in states.values()|sort(attribute="name") %}
+                      <LI><STRONG>{{ state.name }}</STRONG>
+                        <UL>
+                        {% for city in state.cities|sort(attribute="name") %}
+                          <LI>{{ city.name }}</LI>
+                        {% endfor %}
+                        </UL>
+                      </LI>
                     {% endfor %}
                     </UL>
                   </DIV>
-                </SECTION>
-              </DIV>
+                </DIV><DIV class="amenities">
+                  <H3>Amenities</H3>
+                  <H4>&nbsp;</H4>
+                  <UL class="popover">
+                  {% for amenity in amenities.values()|sort(attribute="name") %}
+                    <LI>{{ amenity.name }}</LI>
+                  {% endfor %}
+                  </UL>
+                </DIV>
+              </SECTION>
+            </DIV>
 		<footer>
 			<p>Holberton School</p>
 		</footer>

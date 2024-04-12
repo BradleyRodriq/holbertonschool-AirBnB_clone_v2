@@ -3,6 +3,7 @@
 from models import storage
 from flask import Flask
 from flask import render_template
+from models.amenity import Amenity
 
 app = Flask(__name__)
 
@@ -11,7 +12,7 @@ app = Flask(__name__)
 def hbnb_filters():
     """ displays the main filters HTML page """
     states = storage.all("State")
-    amenities = storage.all("Amenities")
+    amenities = storage.all("Amenity")
     return render_template("10-hbnb_filters.html",
                            states=states, amenities=amenities)
 
